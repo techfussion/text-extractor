@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">TextExtractor</string>
+    <string name="snap_image_illustration">snap image illustration</string>
+    <string name="splash_screen_text">Text Extractor</string>
+</resources>
