@@ -7,10 +7,10 @@
     android:layout_height="match_parent"
     tools:context=".OnboardingScreens">
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
-        app:srcCompat="@drawable/undraw_convert"
-        tools:layout_editor_absoluteY="236dp" />
+<!--    <ImageView-->
+<!--        android:id="@+id/imageView2"-->
+<!--        android:layout_width="300dp"-->
+<!--        android:layout_height="300dp"-->
+<!--        app:srcCompat="@drawable/undraw_convert"-->
+<!--        tools:layout_editor_absoluteY="236dp" />-->
 </androidx.constraintlayout.widget.ConstraintLayout>

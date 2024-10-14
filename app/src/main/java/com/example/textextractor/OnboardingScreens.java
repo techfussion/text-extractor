@@ -20,25 +20,26 @@ public class OnboardingScreens extends TutorialActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
 
-        addFragment(new Step.Builder().setTitle("This is header")
-                .setContent("This is content")
-                .setBackgroundColor(Color.parseColor("#FF0957")) // int background color
-                .setDrawable(R.drawable.undraw_convert_re_l0y1) // int top drawable
-                .setSummary("This is summary")
+        addFragment(new Step.Builder().setTitle("Search Your Location")
+                .setContent("You can search any place nearby or with-in the specified city. We will display specific or all related shops to match your search.")
+                .setBackgroundColor(Color.parseColor("#00B0FF")) // int background color
+                .setDrawable(R.drawable.undraw_convert) // int top drawable
+//                .setSummary("This is summary")
+
                 .build());
 
-        addFragment(new Step.Builder().setTitle("This is header")
-                .setContent("This is content")
-                .setBackgroundColor(Color.parseColor("#FF0957")) // int background color
-                .setDrawable(R.drawable.undraw_convert_re_l0y1) // int top drawable
-                .setSummary("This is summary")
+        addFragment(new Step.Builder().setTitle("Make A Call")
+                .setContent("We provide almost all the numbers of all departments and shops registered with us. You can perform bookings as well.")
+                .setBackgroundColor(Color.parseColor("#00B0FF")) // int background color
+                .setDrawable(R.drawable.undraw_photocopy) // int top drawable
+//                .setSummary("This is summary")
                 .build());
 
-        addFragment(new Step.Builder().setTitle("This is header")
-                .setContent("This is content")
-                .setBackgroundColor(Color.parseColor("#FF0957")) // int background color
+        addFragment(new Step.Builder().setTitle("Add Missing Place")
+                .setContent("If you have a shop or somethings and want to be a part of our growing industry then add your place by following simple steps.")
+                .setBackgroundColor(Color.parseColor("#00B0FF")) // int background color
                 .setDrawable(R.drawable.undraw_convert_re_l0y1) // int top drawable
-                .setSummary("This is summary")
+//                .setSummary("This is summary")
                 .build());
     }
 
