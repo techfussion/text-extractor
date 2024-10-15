@@ -25,7 +25,6 @@ public class OnboardingScreens extends TutorialActivity {
                 .setBackgroundColor(Color.parseColor("#00B0FF")) // int background color
                 .setDrawable(R.drawable.undraw_convert) // int top drawable
 //                .setSummary("This is summary")
-
                 .build());
 
         addFragment(new Step.Builder().setTitle("Make A Call")

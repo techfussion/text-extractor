@@ -1,9 +1,38 @@
 package com.example.textextractor
 
 import android.os.Bundle
+import android.widget.EditText
 import androidx.activity.ComponentActivity
-//import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+//import com.example.textextractor.databinding.ActivityMainBinding
+
+
+class MainActivity : ComponentActivity() {
+    lateinit var result: EditText
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
+//        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(R.layout.activity_main)
+//        setContentView(binding.root)
+
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+//import androidx.activity.compose.setContent
 //import androidx.compose.foundation.layout.fillMaxSize
 //import androidx.compose.foundation.layout.padding
 //import androidx.compose.material3.Scaffold
@@ -13,12 +42,7 @@ import androidx.activity.enableEdgeToEdge
 //import androidx.compose.ui.tooling.preview.Preview
 //import com.example.textextractor.ui.theme.TextExtractorTheme
 
-class MainActivity : ComponentActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
 
-        setContentView(R.layout.activity_main)
 //        setContent {
 //            TextExtractorTheme {
 //                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
@@ -29,8 +53,7 @@ class MainActivity : ComponentActivity() {
 //                }
 //            }
 //        }
-    }
-}
+
 
 //@Composable
 //fun Greeting(name: String, modifier: Modifier = Modifier) {
