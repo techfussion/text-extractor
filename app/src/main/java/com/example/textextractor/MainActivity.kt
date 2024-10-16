@@ -9,7 +9,7 @@ import com.example.textextractor.databinding.ActivityMainBinding // view binding
 import org.gradle.internal.impldep.org.eclipse.jgit.lib.BitmapIndex.Bitmap
 
 class MainActivity : ComponentActivity() {
-//    lateinit var result: EditText // for id selector
+    lateinit var result: EditText // Stores text result
     private lateinit var binding: ActivityMainBinding // view binding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,11 +18,13 @@ class MainActivity : ComponentActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater) // view binding
 //        setContentView(R.layout.activity_main)
         setContentView(binding.root) // view binding
+        supportAcionBar?.hide()
 
         val camera = binding.imageView2
-        val edit = binding.imageView3
+        val erase = binding.imageView3
         val copy = binding.imageView4
 
+        result = binding.textView3
         camera.setOnClickListener{
             val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
 
@@ -32,6 +34,17 @@ class MainActivity : ComponentActivity() {
             } else {
                 Toast.makeText(this, "Oops something went wrong", Toast.LENGTH_SHORT)show()
             }
+        }
+
+        erase.setOnClickListener {
+            result.setText("")
+        }
+
+        copy.setOnClickListener {
+            val clipBoard = getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
+            val clip = ClipData.newPlainText("label", result.text.toString())
+            clipBoard.setPrimaryClip(clip)
+            Toast.makeText(this, "Copied to ClipBoard", Toast.LENGTH_SHORT)show()
         }
     }
 
@@ -44,6 +57,24 @@ class MainActivity : ComponentActivity() {
 
             detectTextUsingML(bitmap)
         }
+    }
+
+    private fun detectTextUsingML(bitmap: Bitmap){
+        val recognizer = TextRecognition.getClient(TextRecognizerOptions.DEFAULT_OPTIONS)
+
+        val image = InputImage.fromBitmap(bitmap, 0)
+
+        val result = recognizer.process(image)
+            .addOnSuccessListener { visionText ->
+                // Task completed successfully
+                // ...
+                result.setText(visionText.text.toString())
+            }
+            .addOnFailureListener { e ->
+                // Task failed with an exception
+                // ...
+                Toast.makeText(this, "Oops something went wrong", Toast.LENGTH_SHORT)show()
+            }
     }
 }
 
