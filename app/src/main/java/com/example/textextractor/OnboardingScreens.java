@@ -20,22 +20,22 @@ public class OnboardingScreens extends TutorialActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
 
-        addFragment(new Step.Builder().setTitle("Search Your Location")
-                .setContent("You can search any place nearby or with-in the specified city. We will display specific or all related shops to match your search.")
+        addFragment(new Step.Builder().setTitle("Take a Picture")
+                .setContent("Simply take a picture of the text you would like to extract, it could be a note, a snippet, or text.")
                 .setBackgroundColor(Color.parseColor("#00B0FF")) // int background color
                 .setDrawable(R.drawable.undraw_convert) // int top drawable
 //                .setSummary("This is summary")
                 .build());
 
-        addFragment(new Step.Builder().setTitle("Make A Call")
-                .setContent("We provide almost all the numbers of all departments and shops registered with us. You can perform bookings as well.")
+        addFragment(new Step.Builder().setTitle("ML Scan")
+                .setContent("Our ML Model would scan through your picture and extract the text within it.")
                 .setBackgroundColor(Color.parseColor("#00B0FF")) // int background color
                 .setDrawable(R.drawable.undraw_photocopy) // int top drawable
 //                .setSummary("This is summary")
                 .build());
 
-        addFragment(new Step.Builder().setTitle("Add Missing Place")
-                .setContent("If you have a shop or somethings and want to be a part of our growing industry then add your place by following simple steps.")
+        addFragment(new Step.Builder().setTitle("Copy to ClipBoard")
+                .setContent("We have provided a quick and easily accessible copy icon to help you copy the text to your clipboard.")
                 .setBackgroundColor(Color.parseColor("#00B0FF")) // int background color
                 .setDrawable(R.drawable.undraw_convert_re_l0y1) // int top drawable
 //                .setSummary("This is summary")
